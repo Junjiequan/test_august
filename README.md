@@ -1,3 +1,5 @@
+# [Live](https://elegant-booth-ab5224.netlify.app/)
+
 # Initial stage - define scope
 
 ## Requirements
