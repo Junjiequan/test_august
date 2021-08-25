@@ -47,7 +47,6 @@
     "@types/lodash": "^4.14.172",
     "@types/node": "^16.7.1",
     "@types/react": "^17.0.19",
-    "@types/react-calendar": "^3.4.3",
     "@types/react-datepicker": "^4.1.4",
     "@types/react-dom": "^17.0.9",
     "@types/react-time-picker": "^4.0.2",
