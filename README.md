@@ -9,15 +9,15 @@
 ## Additional functionalities
 
 - Save todos to localStorage (User experience consideration)
-- Drag and drop functionality (User interaction consideration)
+- ~~Drag and drop functionality (User interaction consideration)~~ (It was the plan but spend too much time on other things)
+
+# Process
 
 ## Tool choice
 
 - Redux for state management
-- React-sortablejs library for drag & drop
+- ~~React-sortablejs library for drag & drop~~
 - Styled-component for styling
-
-# Process
 
 ## Analyze challenges
 
@@ -27,5 +27,13 @@
 
 ## Problem encounterd during process
 
-- Type causing serious laggs (conflict between calendar value & input value useState hook)
+- Input typing cause serious laggs (input value change causing `new Date()` re-render)
+
   - Removed Input onChange useState hook replaced by get value from e.currentTarget and problem solved.
+
+- Tried to make todo filter with reducer and noticed reducer always changes the original state.
+  - Made switch statement inside useSelector hook to get filtered data, so the original state remains unchanged.
+
+# DONE
+
+Probably spend roughly 6~7 hours

@@ -16,14 +16,15 @@ const GlobalStyle = createGlobalStyle`
     /* For keyboard user*/
     *:focus-visible
     {
-        outline: 2px dashed red ;
-        outline-offset: 5px ;
-        transition:all .3s ease;
+        outline: 1px dashed black ;
     }
-    /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-    ul[role='list'],
-    ol[role='list'],
-    li {
+    /* For mouse user */
+     input:focus{
+        outline:0;;
+    }
+
+    /* Remove list style*/
+    li{
         list-style: none;
     }
     /* Remove anchor decoration*/
@@ -47,7 +48,7 @@ const GlobalStyle = createGlobalStyle`
         text-rendering: optimizeSpeed;
         line-height: 2.2rem;
         font-size:1.5rem;
-        background: gray;
+        background: white;
         overflow-x: hidden;
         font-family: sans-serif;
     }
@@ -90,9 +91,16 @@ const GlobalStyle = createGlobalStyle`
         }
     }
     h1{
-        font-size:2.4rem;
-        line-height:3.5rem;
-        letter-spacing:-.33rem;
+        font-size: 4rem;
+        line-height: 5rem;
+        letter-spacing: 0.5rem;
+    }
+    /**********************
+    react-data-picker & react-time-picker custom style
+    ***********************/
+    .react-date-picker__wrapper,
+    .react-time-picker__wrapper {
+        border:0;
     }
 `;
 export default GlobalStyle;
