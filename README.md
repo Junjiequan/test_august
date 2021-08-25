@@ -1,4 +1,6 @@
-# [Live](https://elegant-booth-ab5224.netlify.app/)
+# [Live](https://elegant-booth-ab5224.netlify.app/) | [Code](https://github.com/a331998513/test_august)
+
+I didn't fork the repository, hopefully it won't be an issue.
 
 # Initial stage - define scope
 
