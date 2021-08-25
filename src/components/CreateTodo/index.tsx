@@ -38,6 +38,7 @@ const CreateTodo = () => {
         })
       );
       success();
+      target.value = "";
     }
   };
   return (
