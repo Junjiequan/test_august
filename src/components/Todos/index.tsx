@@ -6,11 +6,14 @@ import type { Todo } from "../../reducer/todoSlice";
 import type { RootState } from "../../reducer/store";
 import CreateTodo from "../CreateTodo";
 
+// enum -. type 9/28
+// stringliteral -> type
+
 const Todos = () => {
-  const [filter, setFilter] = useState("all");
+  const [filter, setFilter] = useState("todo");
   const filteredTodos: Todo[] = useSelector((state: RootState) => {
     switch (filter) {
-      case "all":
+      case "todo":
         return state.todos.todoList;
       case "doing":
         return state.todos.todoList.filter((todo) => todo.completed === false);
@@ -31,7 +34,7 @@ const Todos = () => {
   const handleFilter = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setFilter(e.currentTarget.value);
   };
-  const filters = ["All", "Doing", "Completed"];
+  const filters = ["Todo", "Doing", "Completed"];
   const renderOption = (item: string, index: number) => {
     return (
       <TODOS.Option key={index} value={item.toLowerCase()}>

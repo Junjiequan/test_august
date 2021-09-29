@@ -6,6 +6,7 @@ export type Todo = {
   date: string;
   time: string;
   completed: boolean;
+  pending: boolean;
 };
 
 export type TodosSliceState = {
@@ -27,6 +28,7 @@ const initialState: TodosSliceState = {
       date: "25 Aug",
       time: "",
       completed: true,
+      pending: false,
     },
     {
       id: 2,
@@ -34,6 +36,7 @@ const initialState: TodosSliceState = {
       date: "7 September",
       time: "12:00",
       completed: false,
+      pending: true,
     },
     {
       id: 3,
@@ -41,6 +44,7 @@ const initialState: TodosSliceState = {
       date: "unset",
       time: "",
       completed: false,
+      pending: true,
     },
   ],
 };
@@ -59,6 +63,7 @@ export const todoSlice = createSlice({
         date: action.payload.date,
         time: action.payload.time,
         completed: false,
+        pending: true,
       };
       state.todoList = [...state.todoList, newTodo];
     },
@@ -71,7 +76,7 @@ export const todoSlice = createSlice({
     toggleTodo: (state: TodosSliceState, action: PayloadAction<Number>) => {
       const completedTodo = state.todoList.map((todo: Todo) =>
         todo.id === action.payload
-          ? { ...todo, completed: !todo.completed }
+          ? { ...todo, completed: !todo.completed, pending: !todo.pending }
           : { ...todo }
       );
 
